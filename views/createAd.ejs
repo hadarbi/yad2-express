@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>yad-2 website</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="./javascript/common.js"></script>
+<script src="./javascript/createAd.js"></script>
+<script src="./javascript/navbar.js"></script>
+<script src="./javascript/lastSeenBanner.js"></script>
+
+</head>
+<body>
+
+    <div class=" container mt-5 mb-5" id="adForm">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 bg-body border border-warning">
+                <form id="Form">
+                    <div class="mb-3">
+                        <label for="AdTitle" class="form-label">Title:</label>
+                        <input type="text" class="form-control border-warning-subtle" id="AdTitle">
+                        <div class="invalid-feedback">Title is mandatory.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="AdDescription" class="form-label">Description:</label>
+                        <input type="text" class="form-control border-warning-subtle" id="AdDescription">
+                        <div class="invalid-feedback">Description is to long.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="AdPrice" class="form-label">Price:</label>
+                        <input type="number" class="form-control border-warning-subtle" id="AdPrice">
+                        <div class="invalid-feedback">Price is mandatory and need to be a positive number.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PhoneNumber" class="form-label">Phone Number:</label>
+                        <input type="text" class="form-control border-warning-subtle" id="PhoneNumber">
+                        <div class="invalid-feedback">Phone Number is not valid.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email:</label>
+                        <input type="title" class="form-control border-warning-subtle" id="Email">
+                        <div class="invalid-feedback">Email is mandatory.</div>
+                    </div>
+
+                    <button type="button" class="btn btn-success mb-3" onclick="onSubmit()">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border mt-5 d-none" id ="spinnerForAdCreate" role="status"></div>
+    </div>
+
+    <div class="container text-center bg-body rounded-pill border border-warning p-3 mt-5 w-50 d-none" id="AdCreationApproval">
+        Your ad has been created successfully.
+    </div>
+    
+   
+</body>
+</html>
